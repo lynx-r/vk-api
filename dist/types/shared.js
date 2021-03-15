@@ -1,0 +1,1 @@
+export var ELang;!function(E){E[E.RU=0]="RU",E[E.UK=1]="UK",E[E.BE=2]="BE",E[E.EN=3]="EN",E[E.ES=4]="ES",E[E.FI=5]="FI",E[E.DE=6]="DE",E[E.IT=7]="IT"}(ELang||(ELang={}));

@@ -1,0 +1,1 @@
+import{Repository}from"../Repository";export class AuthRepository extends Repository{constructor(o){super("auth",o),this.restore=this.r("restore")}}

@@ -1,0 +1,1 @@
+export var EMarketItemAvailability;!function(a){a[a.Available=0]="Available",a[a.Deleted=1]="Deleted",a[a.Unavailable=2]="Unavailable"}(EMarketItemAvailability||(EMarketItemAvailability={}));

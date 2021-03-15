@@ -1,0 +1,1 @@
+import{VKError}from"./VKError";export function isVKError(r){return r instanceof VKError}

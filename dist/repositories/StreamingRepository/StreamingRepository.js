@@ -1,0 +1,1 @@
+import{Repository}from"../Repository";export class StreamingRepository extends Repository{constructor(t){super("streaming",t),this.getServerUrl=this.r("getServerUrl"),this.getSettings=this.r("getSettings"),this.getStats=this.r("getStats"),this.getStem=this.r("getStem"),this.setSettings=this.r("setSettings")}}

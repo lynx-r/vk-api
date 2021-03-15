@@ -1,0 +1,1 @@
+import{isNonNullObject}from"../utils";export function isVKAPIMessage(e){return isNonNullObject(e)&&"string"==typeof e.tunnelName&&"string"==typeof e.requestId&&!0===e.isVKAPIMessage}

@@ -1,0 +1,1 @@
+import{Repository}from"../Repository";export class GiftsRepository extends Repository{constructor(t){super("gifts",t),this.get=this.r("get")}}

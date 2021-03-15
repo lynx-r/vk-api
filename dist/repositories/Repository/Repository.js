@@ -1,0 +1,1 @@
+export class Repository{constructor(e,t){this.sendRequest=(({method:s,params:r})=>t({method:e+"."+s,params:r}))}r(e,t){return s=>this.sendRequest({method:e,params:t?t(s):s})}implement(e,t){return Object.defineProperty(this,e,{value:this.r(e,t)}),this}}

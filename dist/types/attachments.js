@@ -1,0 +1,1 @@
+export var EEventAttachmentMemberStatus;!function(t){t[t.SureJoin=0]="SureJoin",t[t.MaybeJoin=1]="MaybeJoin",t[t.NotJoin=2]="NotJoin"}(EEventAttachmentMemberStatus||(EEventAttachmentMemberStatus={}));

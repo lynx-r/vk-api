@@ -1,0 +1,1 @@
+export var EDocType;!function(o){o[o.Text=1]="Text",o[o.Archive=2]="Archive",o[o.Gif=3]="Gif",o[o.Image=4]="Image",o[o.Audio=5]="Audio",o[o.Video=6]="Video",o[o.EBook=7]="EBook",o[o.Unknown=8]="Unknown"}(EDocType||(EDocType={}));

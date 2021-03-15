@@ -1,0 +1,1 @@
+import{Repository}from"../Repository";export class WallRepository extends Repository{constructor(o){super("wall",o),this.post=this.r("post")}}

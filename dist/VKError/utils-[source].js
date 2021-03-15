@@ -1,0 +1,9 @@
+import { VKError } from './VKError';
+/**
+ * States if value is VKError.
+ * @param value
+ * @returns {value is VKError}
+ */
+export function isVKError(value) {
+    return value instanceof VKError;
+}

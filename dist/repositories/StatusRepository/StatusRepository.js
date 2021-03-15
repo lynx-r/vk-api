@@ -1,0 +1,1 @@
+import{Repository}from"../Repository";export class StatusRepository extends Repository{constructor(t){super("status",t),this.get=this.r("get"),this.set=this.r("set")}}

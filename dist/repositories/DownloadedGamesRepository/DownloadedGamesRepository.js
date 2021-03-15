@@ -1,0 +1,1 @@
+import{Repository}from"../Repository";export class DownloadedGamesRepository extends Repository{constructor(o){super("downloadedGames",o),this.getPaidStatus=this.r("getPaidStatus")}}

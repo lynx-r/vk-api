@@ -1,0 +1,1 @@
+export var EGiftPrivacy;!function(e){e[e.NameAndMessagePublic=0]="NameAndMessagePublic",e[e.NamePublicMessagePrivate=1]="NamePublicMessagePrivate",e[e.NameAndMessagePrivate=2]="NameAndMessagePrivate"}(EGiftPrivacy||(EGiftPrivacy={}));

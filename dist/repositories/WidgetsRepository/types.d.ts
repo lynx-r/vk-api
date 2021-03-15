@@ -1,0 +1,44 @@
+import { IPost } from '../../types';
+/**
+ * @see https://vk.com/dev/widgets.getComments
+ */
+export interface IGetCommentsParams {
+    widgetApiId?: number;
+    url: string;
+    pageId?: string;
+    order?: 'date' | 'likes' | 'last_comment';
+    fields?: string[];
+    offset?: number;
+    count?: number;
+}
+export interface IGetCommentsResult {
+    count: number;
+    posts: IPost[];
+}
+/**
+ * @see https://vk.com/dev/widgets.getPages
+ */
+export interface IGetPagesParams {
+    widgetApiId?: number;
+    order?: 'date' | 'comments' | 'likes' | 'friend_likes';
+    period?: 'day' | 'week' | 'month' | 'alltime';
+    offset?: number;
+    count?: number;
+}
+export interface IGetPagesResult {
+    count: number;
+    pages: Array<{
+        id: string;
+        title: string;
+        description: string;
+        url: string;
+        likes: {
+            count: number;
+        };
+        comments: {
+            count: number;
+        };
+        date: number;
+        pageId: string;
+    }>;
+}
