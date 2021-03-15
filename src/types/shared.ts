@@ -12,6 +12,7 @@ import {
   StatsRepository,
   StreamingRepository,
   UsersRepository,
+  WallRepository,
   UtilsRepository,
   WidgetsRepository,
   DownloadedGamesRepository,
@@ -163,6 +164,7 @@ export interface IRepositories {
   storage: StorageRepository;
   streaming: StreamingRepository;
   users: UsersRepository;
+  wall: WallRepository;
   utils: UtilsRepository;
   widgets: WidgetsRepository;
 }

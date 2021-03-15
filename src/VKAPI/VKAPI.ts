@@ -1,10 +1,10 @@
-import fetch from 'isomorphic-fetch';
-import {TAddRepository, TLang, TSendRequest} from '../types';
-import {IVKAPI, IVKAPIConstructorProps} from './types';
-import {VKError} from '../VKError';
-import {recursiveToCamelCase, recursiveToSnakeCase} from '../utils';
-import {Core} from '../Core';
-import {Queue} from '../Queue';
+import 'cross-fetch/polyfill'
+import { Core } from '../Core'
+import { Queue } from '../Queue'
+import { TAddRepository, TLang, TSendRequest } from '../types'
+import { recursiveToCamelCase, recursiveToSnakeCase } from '../utils'
+import { VKError } from '../VKError'
+import { IVKAPI, IVKAPIConstructorProps } from './types'
 
 /**
  * Class to perform requests to VK API.

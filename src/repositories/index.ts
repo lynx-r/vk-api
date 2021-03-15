@@ -15,5 +15,6 @@ export * from './StatusRepository';
 export * from './StorageRepository';
 export * from './StreamingRepository';
 export * from './UsersRepository';
+export * from './WallRepository';
 export * from './UtilsRepository';
 export * from './WidgetsRepository';

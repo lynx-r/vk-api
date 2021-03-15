@@ -16,8 +16,8 @@ import {
   WidgetsRepository,
   GiftsRepository,
   DownloadedGamesRepository,
-  AccountRepository, StatusRepository, Repository,
-} from '../repositories';
+  AccountRepository, StatusRepository, Repository, WallRepository,
+} from '../repositories'
 import {TSendRequest} from '../types';
 
 const notImplemented: TSendRequest = () => {
@@ -43,6 +43,7 @@ export abstract class Core implements IRepositories {
   storage = new StorageRepository(notImplemented);
   streaming = new StreamingRepository(notImplemented);
   users = new UsersRepository(notImplemented);
+  wall = new WallRepository(notImplemented);
   utils = new UtilsRepository(notImplemented);
   widgets = new WidgetsRepository(notImplemented);
 
@@ -63,6 +64,7 @@ export abstract class Core implements IRepositories {
     this.storage = new StorageRepository(addRequestToQueue);
     this.streaming = new StreamingRepository(addRequestToQueue);
     this.users = new UsersRepository(addRequestToQueue);
+    this.wall = new WallRepository(addRequestToQueue);
     this.utils = new UtilsRepository(addRequestToQueue);
     this.widgets = new WidgetsRepository(addRequestToQueue);
   }
