@@ -1,1 +1,1 @@
-import{isVKAPIMessage}from"../utils";import{PERFORM_REQUEST_EVENT}from"../constants";export function isVKAPIProcessRequestMessage(s){return isVKAPIMessage(s)&&s.type===PERFORM_REQUEST_EVENT}
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.isVKAPIProcessRequestMessage=void 0;var utils_1=require("../utils"),constants_1=require("../constants");function isVKAPIProcessRequestMessage(s){return utils_1.isVKAPIMessage(s)&&s.type===constants_1.PERFORM_REQUEST_EVENT}exports.isVKAPIProcessRequestMessage=isVKAPIProcessRequestMessage;

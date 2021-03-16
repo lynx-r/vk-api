@@ -1,12 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Repository = void 0;
 /**
  * Base class to create repositories
  */
-export class Repository {
-    constructor(repoName, sendRequest) {
-        this.sendRequest = ({ method, params }) => sendRequest({
-            method: repoName + '.' + method,
-            params,
-        });
+var Repository = /** @class */ (function () {
+    function Repository(repoName, sendRequest) {
+        this.sendRequest = function (_a) {
+            var method = _a.method, params = _a.params;
+            return sendRequest({
+                method: repoName + '.' + method,
+                params: params,
+            });
+        };
     }
     /**
      * Creates method which sends request.
@@ -14,12 +20,13 @@ export class Repository {
      * @param prepare
      * @returns {TRepositoryMethod<P, R>}
      */
-    r(method, prepare) {
-        return params => this.sendRequest({
-            method,
+    Repository.prototype.r = function (method, prepare) {
+        var _this = this;
+        return function (params) { return _this.sendRequest({
+            method: method,
             params: prepare ? prepare(params) : params,
-        });
-    }
+        }); };
+    };
     /**
      * Implements new method in repository mutating it. Returns current instance
      * for chaining.
@@ -27,8 +34,10 @@ export class Repository {
      * @param {(params: P) => any} prepare
      * @returns {this & {[key in M]: TRepositoryMethod<P, R>}}
      */
-    implement(method, prepare) {
+    Repository.prototype.implement = function (method, prepare) {
         Object.defineProperty(this, method, { value: this.r(method, prepare) });
         return this;
-    }
-}
+    };
+    return Repository;
+}());
+exports.Repository = Repository;

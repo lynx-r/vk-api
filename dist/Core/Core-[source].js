@@ -1,50 +1,53 @@
-import { AuthRepository, DatabaseRepository, DonutRepository, LikesRepository, StorageRepository, SpecialsRepository, MessagesRepository, NotificationsRepository, StatEventsRepository, StatsRepository, StreamingRepository, UsersRepository, UtilsRepository, WidgetsRepository, GiftsRepository, DownloadedGamesRepository, AccountRepository, StatusRepository, WallRepository, } from '../repositories';
-const notImplemented = () => {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Core = void 0;
+var repositories_1 = require("../repositories");
+var notImplemented = function () {
     throw new Error('Unable to call repository method due to Core was not initialized');
 };
-export class Core {
-    constructor() {
-        this.account = new AccountRepository(notImplemented);
-        this.auth = new AuthRepository(notImplemented);
-        this.database = new DatabaseRepository(notImplemented);
-        this.donut = new DonutRepository(notImplemented);
-        this.downloadedGames = new DownloadedGamesRepository(notImplemented);
-        this.gifts = new GiftsRepository(notImplemented);
-        this.likes = new LikesRepository(notImplemented);
-        this.messages = new MessagesRepository(notImplemented);
-        this.notifications = new NotificationsRepository(notImplemented);
-        this.specials = new SpecialsRepository(notImplemented);
-        this.statEvents = new StatEventsRepository(notImplemented);
-        this.stats = new StatsRepository(notImplemented);
-        this.status = new StatusRepository(notImplemented);
-        this.storage = new StorageRepository(notImplemented);
-        this.streaming = new StreamingRepository(notImplemented);
-        this.users = new UsersRepository(notImplemented);
-        this.wall = new WallRepository(notImplemented);
-        this.utils = new UtilsRepository(notImplemented);
-        this.widgets = new WidgetsRepository(notImplemented);
+var Core = /** @class */ (function () {
+    function Core() {
+        this.account = new repositories_1.AccountRepository(notImplemented);
+        this.auth = new repositories_1.AuthRepository(notImplemented);
+        this.database = new repositories_1.DatabaseRepository(notImplemented);
+        this.donut = new repositories_1.DonutRepository(notImplemented);
+        this.downloadedGames = new repositories_1.DownloadedGamesRepository(notImplemented);
+        this.gifts = new repositories_1.GiftsRepository(notImplemented);
+        this.likes = new repositories_1.LikesRepository(notImplemented);
+        this.messages = new repositories_1.MessagesRepository(notImplemented);
+        this.notifications = new repositories_1.NotificationsRepository(notImplemented);
+        this.specials = new repositories_1.SpecialsRepository(notImplemented);
+        this.statEvents = new repositories_1.StatEventsRepository(notImplemented);
+        this.stats = new repositories_1.StatsRepository(notImplemented);
+        this.status = new repositories_1.StatusRepository(notImplemented);
+        this.storage = new repositories_1.StorageRepository(notImplemented);
+        this.streaming = new repositories_1.StreamingRepository(notImplemented);
+        this.users = new repositories_1.UsersRepository(notImplemented);
+        this.wall = new repositories_1.WallRepository(notImplemented);
+        this.utils = new repositories_1.UtilsRepository(notImplemented);
+        this.widgets = new repositories_1.WidgetsRepository(notImplemented);
     }
-    init(addRequestToQueue) {
-        this.account = new AccountRepository(addRequestToQueue);
-        this.auth = new AuthRepository(addRequestToQueue);
-        this.database = new DatabaseRepository(addRequestToQueue);
-        this.donut = new DonutRepository(addRequestToQueue);
-        this.downloadedGames = new DownloadedGamesRepository(addRequestToQueue);
-        this.gifts = new GiftsRepository(addRequestToQueue);
-        this.likes = new LikesRepository(addRequestToQueue);
-        this.messages = new MessagesRepository(addRequestToQueue);
-        this.notifications = new NotificationsRepository(addRequestToQueue);
-        this.specials = new SpecialsRepository(addRequestToQueue);
-        this.statEvents = new StatEventsRepository(addRequestToQueue);
-        this.stats = new StatsRepository(addRequestToQueue);
-        this.status = new StatusRepository(addRequestToQueue);
-        this.storage = new StorageRepository(addRequestToQueue);
-        this.streaming = new StreamingRepository(addRequestToQueue);
-        this.users = new UsersRepository(addRequestToQueue);
-        this.wall = new WallRepository(addRequestToQueue);
-        this.utils = new UtilsRepository(addRequestToQueue);
-        this.widgets = new WidgetsRepository(addRequestToQueue);
-    }
+    Core.prototype.init = function (addRequestToQueue) {
+        this.account = new repositories_1.AccountRepository(addRequestToQueue);
+        this.auth = new repositories_1.AuthRepository(addRequestToQueue);
+        this.database = new repositories_1.DatabaseRepository(addRequestToQueue);
+        this.donut = new repositories_1.DonutRepository(addRequestToQueue);
+        this.downloadedGames = new repositories_1.DownloadedGamesRepository(addRequestToQueue);
+        this.gifts = new repositories_1.GiftsRepository(addRequestToQueue);
+        this.likes = new repositories_1.LikesRepository(addRequestToQueue);
+        this.messages = new repositories_1.MessagesRepository(addRequestToQueue);
+        this.notifications = new repositories_1.NotificationsRepository(addRequestToQueue);
+        this.specials = new repositories_1.SpecialsRepository(addRequestToQueue);
+        this.statEvents = new repositories_1.StatEventsRepository(addRequestToQueue);
+        this.stats = new repositories_1.StatsRepository(addRequestToQueue);
+        this.status = new repositories_1.StatusRepository(addRequestToQueue);
+        this.storage = new repositories_1.StorageRepository(addRequestToQueue);
+        this.streaming = new repositories_1.StreamingRepository(addRequestToQueue);
+        this.users = new repositories_1.UsersRepository(addRequestToQueue);
+        this.wall = new repositories_1.WallRepository(addRequestToQueue);
+        this.utils = new repositories_1.UtilsRepository(addRequestToQueue);
+        this.widgets = new repositories_1.WidgetsRepository(addRequestToQueue);
+    };
     /**
      * Adds new repository if it is not implemented.
      * @param {N extends keyof this ? never : N} name
@@ -52,8 +55,10 @@ export class Core {
      * @param {TSendRequest} addRequestToQueue
      * @returns {this & Record<N, R>}
      */
-    addRepository(name, Repo, addRequestToQueue) {
+    Core.prototype.addRepository = function (name, Repo, addRequestToQueue) {
         Object.defineProperty(this, name, { value: new Repo(addRequestToQueue) });
         return this;
-    }
-}
+    };
+    return Core;
+}());
+exports.Core = Core;

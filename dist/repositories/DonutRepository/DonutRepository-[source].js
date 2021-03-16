@@ -1,3 +1,28 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -9,33 +34,39 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import { Repository } from '../Repository';
-import { formatOptionalArray } from '../../utils';
-export class DonutRepository extends Repository {
-    constructor(sendRequest) {
-        super('donut', sendRequest);
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DonutRepository = void 0;
+var Repository_1 = require("../Repository");
+var utils_1 = require("../../utils");
+var DonutRepository = /** @class */ (function (_super) {
+    __extends(DonutRepository, _super);
+    function DonutRepository(sendRequest) {
+        var _this = _super.call(this, 'donut', sendRequest) || this;
         /**
          * @see https://vk.com/dev/donut.getFriends
          * @type {(params: (IGetFriendsParams & IRequestOptionalParams)) => Promise<IGetFriendsResult>}
          */
-        this.getFriends = this.r('getFriends', (_a) => {
-            var { fields } = _a, rest = __rest(_a, ["fields"]);
-            return (Object.assign(Object.assign({}, rest), { fields: formatOptionalArray(fields) }));
+        _this.getFriends = _this.r('getFriends', function (_a) {
+            var fields = _a.fields, rest = __rest(_a, ["fields"]);
+            return (__assign(__assign({}, rest), { fields: utils_1.formatOptionalArray(fields) }));
         });
         /**
          * @see https://vk.com/dev/donut.getSubscription
          * @type {(params: (IGetSubscriptionParams & IRequestOptionalParams)) => Promise<IGetSubscriptionResult>}
          */
-        this.getSubscription = this.r('getSubscription');
+        _this.getSubscription = _this.r('getSubscription');
         /**
          * @see https://vk.com/dev/donut.getSubscriptions
          * @type {(params: (IGetSubscriptionsParams & IRequestOptionalParams)) => Promise<IGetSubscriptionsResult>}
          */
-        this.getSubscriptions = this.r('getSubscriptions');
+        _this.getSubscriptions = _this.r('getSubscriptions');
         /**
          * @see https://vk.com/dev/donut.isDon
          * @type {(params: (IIsDonParams & IRequestOptionalParams)) => Promise<0 | 1>}
          */
-        this.isDon = this.r('isDon');
+        _this.isDon = _this.r('isDon');
+        return _this;
     }
-}
+    return DonutRepository;
+}(Repository_1.Repository));
+exports.DonutRepository = DonutRepository;

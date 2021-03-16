@@ -1,1 +1,1 @@
-export var EEventAttachmentMemberStatus;!function(t){t[t.SureJoin=0]="SureJoin",t[t.MaybeJoin=1]="MaybeJoin",t[t.NotJoin=2]="NotJoin"}(EEventAttachmentMemberStatus||(EEventAttachmentMemberStatus={}));
+"use strict";var EEventAttachmentMemberStatus;Object.defineProperty(exports,"__esModule",{value:!0}),exports.EEventAttachmentMemberStatus=void 0,function(t){t[t.SureJoin=0]="SureJoin",t[t.MaybeJoin=1]="MaybeJoin",t[t.NotJoin=2]="NotJoin"}(EEventAttachmentMemberStatus=exports.EEventAttachmentMemberStatus||(exports.EEventAttachmentMemberStatus={}));

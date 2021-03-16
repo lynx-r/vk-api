@@ -1,3 +1,28 @@
+"use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -9,88 +34,94 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import { Repository } from '../Repository';
-import { formatOptionalBoolean, formatOptionalArray } from '../../utils';
-export class DatabaseRepository extends Repository {
-    constructor(sendRequest) {
-        super('database', sendRequest);
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DatabaseRepository = void 0;
+var Repository_1 = require("../Repository");
+var utils_1 = require("../../utils");
+var DatabaseRepository = /** @class */ (function (_super) {
+    __extends(DatabaseRepository, _super);
+    function DatabaseRepository(sendRequest) {
+        var _this = _super.call(this, 'database', sendRequest) || this;
         /**
          * @see https://vk.com/dev/database.getChairs
          * @type {TRepositoryMethod<IGetChairsParams, TGetChairsResult>}
          */
-        this.getChairs = this.r('getChairs');
+        _this.getChairs = _this.r('getChairs');
         /**
          * @see https://vk.com/dev/database.getCities
          * @type {TRepositoryMethod<IGetCitiesParams, TGetCitiesResult>}
          */
-        this.getCities = this.r('getCities', (_a) => {
-            var { needAll } = _a, rest = __rest(_a, ["needAll"]);
-            return (Object.assign(Object.assign({}, rest), { needAll: formatOptionalBoolean(needAll) }));
+        _this.getCities = _this.r('getCities', function (_a) {
+            var needAll = _a.needAll, rest = __rest(_a, ["needAll"]);
+            return (__assign(__assign({}, rest), { needAll: utils_1.formatOptionalBoolean(needAll) }));
         });
         /**
          * @see https://vk.com/dev/database.getCitiesById
          * @type {TRepositoryMethod<IGetCitiesByIdParams, TGetCitiesByIdResult>}
          */
-        this.getCitiesById = this.r('getCitiesById', (_a) => {
-            var { cityIds } = _a, rest = __rest(_a, ["cityIds"]);
-            return (Object.assign(Object.assign({}, rest), { cityIds: formatOptionalArray(cityIds) }));
+        _this.getCitiesById = _this.r('getCitiesById', function (_a) {
+            var cityIds = _a.cityIds, rest = __rest(_a, ["cityIds"]);
+            return (__assign(__assign({}, rest), { cityIds: utils_1.formatOptionalArray(cityIds) }));
         });
         /**
          * @see https://vk.com/dev/database.getCountries
          * @type {TRepositoryMethod<IGetCountriesParams, TGetCountriesResult>}
          */
-        this.getCountries = this.r('getCountries', (_a) => {
-            var { code, needAll } = _a, rest = __rest(_a, ["code", "needAll"]);
-            return (Object.assign(Object.assign({}, rest), { needAll: formatOptionalBoolean(needAll), code: formatOptionalArray(code) }));
+        _this.getCountries = _this.r('getCountries', function (_a) {
+            var code = _a.code, needAll = _a.needAll, rest = __rest(_a, ["code", "needAll"]);
+            return (__assign(__assign({}, rest), { needAll: utils_1.formatOptionalBoolean(needAll), code: utils_1.formatOptionalArray(code) }));
         });
         /**
          * @see https://vk.com/dev/database.getCountriesById
          * @type {TRepositoryMethod<IGetCountriesByIdParams, TGetCountriesByIdResult>}
          */
-        this.getCountriesById = this.r('getCountriesById', (_a) => {
-            var { countryIds } = _a, rest = __rest(_a, ["countryIds"]);
-            return (Object.assign(Object.assign({}, rest), { countryIds: formatOptionalArray(countryIds) }));
+        _this.getCountriesById = _this.r('getCountriesById', function (_a) {
+            var countryIds = _a.countryIds, rest = __rest(_a, ["countryIds"]);
+            return (__assign(__assign({}, rest), { countryIds: utils_1.formatOptionalArray(countryIds) }));
         });
         /**
          * @see https://vk.com/dev/database.getFaculties
          * @type {TRepositoryMethod<IGetFacultiesParams, TGetFacultiesResult>}
          */
-        this.getFaculties = this.r('getFaculties');
+        _this.getFaculties = _this.r('getFaculties');
         /**
          * @see https://vk.com/dev/database.getMetroStations
          * @type {TRepositoryMethod<IGetCountriesParams, TGetCountriesResult>}
          */
-        this.getMetroStations = this.r('getMetroStations', (_a) => {
-            var { extended } = _a, rest = __rest(_a, ["extended"]);
-            return (Object.assign(Object.assign({}, rest), { extended: formatOptionalBoolean(extended) }));
+        _this.getMetroStations = _this.r('getMetroStations', function (_a) {
+            var extended = _a.extended, rest = __rest(_a, ["extended"]);
+            return (__assign(__assign({}, rest), { extended: utils_1.formatOptionalBoolean(extended) }));
         });
         /**
          * @see https://vk.com/dev/database.getMetroStationsById
          * @type {TRepositoryMethod<IGetMetroStationsByIdParams, TGetMetroStationsByIdResult>}
          */
-        this.getMetroStationsById = this.r('getMetroStationsById', (_a) => {
-            var { stationIds } = _a, rest = __rest(_a, ["stationIds"]);
-            return (Object.assign(Object.assign({}, rest), { stationIds: formatOptionalArray(stationIds) }));
+        _this.getMetroStationsById = _this.r('getMetroStationsById', function (_a) {
+            var stationIds = _a.stationIds, rest = __rest(_a, ["stationIds"]);
+            return (__assign(__assign({}, rest), { stationIds: utils_1.formatOptionalArray(stationIds) }));
         });
         /**
          * @see https://vk.com/dev/database.getRegions
          * @type {TRepositoryMethod<IGetRegionsParams, TGetRegionsResult>}
          */
-        this.getRegions = this.r('getRegions');
+        _this.getRegions = _this.r('getRegions');
         /**
          * @see https://vk.com/dev/database.getSchoolClasses
          * @type {TRepositoryMethod<IGetSchoolClassesParams, TGetSchoolClassesResult>}
          */
-        this.getSchoolClasses = this.r('getSchoolClasses');
+        _this.getSchoolClasses = _this.r('getSchoolClasses');
         /**
          * @see https://vk.com/dev/database.getSchools
          * @type {TRepositoryMethod<IGetSchoolsParams, TGetSchoolsResult>}
          */
-        this.getSchools = this.r('getSchools');
+        _this.getSchools = _this.r('getSchools');
         /**
          * @see https://vk.com/dev/database.getUniversities
          * @type {TRepositoryMethod<IGetUniversitiesParams, TGetUniversitiesResult>}
          */
-        this.getUniversities = this.r('getUniversities');
+        _this.getUniversities = _this.r('getUniversities');
+        return _this;
     }
-}
+    return DatabaseRepository;
+}(Repository_1.Repository));
+exports.DatabaseRepository = DatabaseRepository;

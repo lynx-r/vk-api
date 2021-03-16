@@ -1,8 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EAudioGenre = void 0;
 /**
  * List of audio genres.
  * @see https://vk.com/dev/objects/audio_genres
  */
-export var EAudioGenre;
+var EAudioGenre;
 (function (EAudioGenre) {
     EAudioGenre[EAudioGenre["Rock"] = 1] = "Rock";
     EAudioGenre[EAudioGenre["Pop"] = 2] = "Pop";
@@ -25,4 +28,4 @@ export var EAudioGenre;
     EAudioGenre[EAudioGenre["Alternative"] = 21] = "Alternative";
     EAudioGenre[EAudioGenre["ElectropopAndDisco"] = 22] = "ElectropopAndDisco";
     EAudioGenre[EAudioGenre["JazzAndBlues"] = 1001] = "JazzAndBlues";
-})(EAudioGenre || (EAudioGenre = {}));
+})(EAudioGenre = exports.EAudioGenre || (exports.EAudioGenre = {}));

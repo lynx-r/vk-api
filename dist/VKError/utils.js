@@ -1,1 +1,1 @@
-import{VKError}from"./VKError";export function isVKError(r){return r instanceof VKError}
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.isVKError=void 0;var VKError_1=require("./VKError");function isVKError(r){return r instanceof VKError_1.VKError}exports.isVKError=isVKError;

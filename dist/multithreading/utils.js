@@ -1,1 +1,1 @@
-import{isNonNullObject}from"../utils";export function isVKAPIMessage(e){return isNonNullObject(e)&&"string"==typeof e.tunnelName&&"string"==typeof e.requestId&&!0===e.isVKAPIMessage}
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.isVKAPIMessage=void 0;var utils_1=require("../utils");function isVKAPIMessage(e){return utils_1.isNonNullObject(e)&&"string"==typeof e.tunnelName&&"string"==typeof e.requestId&&!0===e.isVKAPIMessage}exports.isVKAPIMessage=isVKAPIMessage;

@@ -1,11 +1,14 @@
-export var EFriendStatus;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ESex = exports.ESchoolType = exports.ERelationsStatus = exports.EAlcohol = exports.ESmoking = exports.ELifeMain = exports.EPeopleMain = exports.EPolitical = exports.EPlatform = exports.EFriendStatus = void 0;
+var EFriendStatus;
 (function (EFriendStatus) {
     EFriendStatus[EFriendStatus["NotFriend"] = 0] = "NotFriend";
     EFriendStatus[EFriendStatus["RequestSent"] = 1] = "RequestSent";
     EFriendStatus[EFriendStatus["IsSubscribed"] = 2] = "IsSubscribed";
     EFriendStatus[EFriendStatus["IsFriend"] = 3] = "IsFriend";
-})(EFriendStatus || (EFriendStatus = {}));
-export var EPlatform;
+})(EFriendStatus = exports.EFriendStatus || (exports.EFriendStatus = {}));
+var EPlatform;
 (function (EPlatform) {
     EPlatform[EPlatform["Mobile"] = 1] = "Mobile";
     EPlatform[EPlatform["IPhone"] = 2] = "IPhone";
@@ -14,8 +17,8 @@ export var EPlatform;
     EPlatform[EPlatform["WindowsPhone"] = 5] = "WindowsPhone";
     EPlatform[EPlatform["Windows10"] = 6] = "Windows10";
     EPlatform[EPlatform["Desktop"] = 7] = "Desktop";
-})(EPlatform || (EPlatform = {}));
-export var EPolitical;
+})(EPlatform = exports.EPlatform || (exports.EPlatform = {}));
+var EPolitical;
 (function (EPolitical) {
     EPolitical[EPolitical["Communist"] = 1] = "Communist";
     EPolitical[EPolitical["Socialist"] = 2] = "Socialist";
@@ -26,8 +29,8 @@ export var EPolitical;
     EPolitical[EPolitical["Ultraconservative"] = 7] = "Ultraconservative";
     EPolitical[EPolitical["Indifferent"] = 8] = "Indifferent";
     EPolitical[EPolitical["Libertarian"] = 9] = "Libertarian";
-})(EPolitical || (EPolitical = {}));
-export var EPeopleMain;
+})(EPolitical = exports.EPolitical || (exports.EPolitical = {}));
+var EPeopleMain;
 (function (EPeopleMain) {
     EPeopleMain[EPeopleMain["SmartAndCreative"] = 1] = "SmartAndCreative";
     EPeopleMain[EPeopleMain["KindnessAndHonesty"] = 2] = "KindnessAndHonesty";
@@ -35,8 +38,8 @@ export var EPeopleMain;
     EPeopleMain[EPeopleMain["PowerAndWealth"] = 4] = "PowerAndWealth";
     EPeopleMain[EPeopleMain["CourageAndPerseverance"] = 5] = "CourageAndPerseverance";
     EPeopleMain[EPeopleMain["HumorAndLoveForLife"] = 6] = "HumorAndLoveForLife";
-})(EPeopleMain || (EPeopleMain = {}));
-export var ELifeMain;
+})(EPeopleMain = exports.EPeopleMain || (exports.EPeopleMain = {}));
+var ELifeMain;
 (function (ELifeMain) {
     ELifeMain[ELifeMain["FamilyAndChildren"] = 1] = "FamilyAndChildren";
     ELifeMain[ELifeMain["CareerAndMoney"] = 2] = "CareerAndMoney";
@@ -46,24 +49,24 @@ export var ELifeMain;
     ELifeMain[ELifeMain["SelfDevelopment"] = 6] = "SelfDevelopment";
     ELifeMain[ELifeMain["BeautyAndArt"] = 7] = "BeautyAndArt";
     ELifeMain[ELifeMain["FameAndInfluence"] = 8] = "FameAndInfluence";
-})(ELifeMain || (ELifeMain = {}));
-export var ESmoking;
+})(ELifeMain = exports.ELifeMain || (exports.ELifeMain = {}));
+var ESmoking;
 (function (ESmoking) {
     ESmoking[ESmoking["SharplyNegative"] = 1] = "SharplyNegative";
     ESmoking[ESmoking["Negative"] = 2] = "Negative";
     ESmoking[ESmoking["Compromise"] = 3] = "Compromise";
     ESmoking[ESmoking["Neutral"] = 4] = "Neutral";
     ESmoking[ESmoking["Positive"] = 5] = "Positive";
-})(ESmoking || (ESmoking = {}));
-export var EAlcohol;
+})(ESmoking = exports.ESmoking || (exports.ESmoking = {}));
+var EAlcohol;
 (function (EAlcohol) {
     EAlcohol[EAlcohol["SharplyNegative"] = 1] = "SharplyNegative";
     EAlcohol[EAlcohol["Negative"] = 2] = "Negative";
     EAlcohol[EAlcohol["Compromise"] = 3] = "Compromise";
     EAlcohol[EAlcohol["Neutral"] = 4] = "Neutral";
     EAlcohol[EAlcohol["Positive"] = 5] = "Positive";
-})(EAlcohol || (EAlcohol = {}));
-export var ERelationsStatus;
+})(EAlcohol = exports.EAlcohol || (exports.EAlcohol = {}));
+var ERelationsStatus;
 (function (ERelationsStatus) {
     ERelationsStatus[ERelationsStatus["Unknown"] = 0] = "Unknown";
     ERelationsStatus[ERelationsStatus["NotMarried"] = 1] = "NotMarried";
@@ -74,8 +77,8 @@ export var ERelationsStatus;
     ERelationsStatus[ERelationsStatus["ActiveSearch"] = 6] = "ActiveSearch";
     ERelationsStatus[ERelationsStatus["InLove"] = 7] = "InLove";
     ERelationsStatus[ERelationsStatus["CivilMarried"] = 8] = "CivilMarried";
-})(ERelationsStatus || (ERelationsStatus = {}));
-export var ESchoolType;
+})(ERelationsStatus = exports.ERelationsStatus || (exports.ERelationsStatus = {}));
+var ESchoolType;
 (function (ESchoolType) {
     ESchoolType[ESchoolType["School"] = 0] = "School";
     ESchoolType[ESchoolType["Gymnasium"] = 1] = "Gymnasium";
@@ -91,10 +94,10 @@ export var ESchoolType;
     ESchoolType[ESchoolType["PTU"] = 11] = "PTU";
     ESchoolType[ESchoolType["Institute"] = 12] = "Institute";
     ESchoolType[ESchoolType["ArtisticSchool"] = 12] = "ArtisticSchool";
-})(ESchoolType || (ESchoolType = {}));
-export var ESex;
+})(ESchoolType = exports.ESchoolType || (exports.ESchoolType = {}));
+var ESex;
 (function (ESex) {
     ESex[ESex["Unknown"] = 0] = "Unknown";
     ESex[ESex["Female"] = 1] = "Female";
     ESex[ESex["Male"] = 2] = "Male";
-})(ESex || (ESex = {}));
+})(ESex = exports.ESex || (exports.ESex = {}));

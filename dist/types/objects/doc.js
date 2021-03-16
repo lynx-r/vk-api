@@ -1,1 +1,1 @@
-export var EDocType;!function(o){o[o.Text=1]="Text",o[o.Archive=2]="Archive",o[o.Gif=3]="Gif",o[o.Image=4]="Image",o[o.Audio=5]="Audio",o[o.Video=6]="Video",o[o.EBook=7]="EBook",o[o.Unknown=8]="Unknown"}(EDocType||(EDocType={}));
+"use strict";var EDocType;Object.defineProperty(exports,"__esModule",{value:!0}),exports.EDocType=void 0,function(e){e[e.Text=1]="Text",e[e.Archive=2]="Archive",e[e.Gif=3]="Gif",e[e.Image=4]="Image",e[e.Audio=5]="Audio",e[e.Video=6]="Video",e[e.EBook=7]="EBook",e[e.Unknown=8]="Unknown"}(EDocType=exports.EDocType||(exports.EDocType={}));

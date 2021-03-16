@@ -1,4 +1,7 @@
-export var EErrors;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.EErrors = void 0;
+var EErrors;
 (function (EErrors) {
     EErrors[EErrors["Unknown"] = 1] = "Unknown";
     EErrors[EErrors["ApplicationDisabled"] = 2] = "ApplicationDisabled";
@@ -63,4 +66,4 @@ export var EErrors;
     EErrors[EErrors["EmailConfirmationNeeded"] = 3304] = "EmailConfirmationNeeded";
     EErrors[EErrors["AssertVotes"] = 3305] = "AssertVotes";
     EErrors[EErrors["TokenExtensionRequired"] = 3609] = "TokenExtensionRequired";
-})(EErrors || (EErrors = {}));
+})(EErrors = exports.EErrors || (exports.EErrors = {}));

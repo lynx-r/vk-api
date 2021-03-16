@@ -1,7 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ELang = void 0;
 /**
  * Enum of available languages.
  */
-export var ELang;
+var ELang;
 (function (ELang) {
     ELang[ELang["RU"] = 0] = "RU";
     ELang[ELang["UK"] = 1] = "UK";
@@ -11,4 +14,4 @@ export var ELang;
     ELang[ELang["FI"] = 5] = "FI";
     ELang[ELang["DE"] = 6] = "DE";
     ELang[ELang["IT"] = 7] = "IT";
-})(ELang || (ELang = {}));
+})(ELang = exports.ELang || (exports.ELang = {}));

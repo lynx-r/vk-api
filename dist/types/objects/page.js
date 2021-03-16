@@ -1,1 +1,1 @@
-export var EPageAccess;!function(s){s[s.Admins=0]="Admins",s[s.Participants=1]="Participants",s[s.Everybody=2]="Everybody"}(EPageAccess||(EPageAccess={}));
+"use strict";var EPageAccess;Object.defineProperty(exports,"__esModule",{value:!0}),exports.EPageAccess=void 0,function(e){e[e.Admins=0]="Admins",e[e.Participants=1]="Participants",e[e.Everybody=2]="Everybody"}(EPageAccess=exports.EPageAccess||(exports.EPageAccess={}));
